@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/base.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <header class="sticky-header">
+  <div class="header-content">
+      <a href="index.html"><img src="assets/transparent_logo2.png" alt="High-End Transportation logo" class="logo" id="logo"></a>
+  </div>
+  </header>
+  <div class="container">
+    <form id="login-form" class="login-form">
+      <h1 class="dashboard-title yellow-line">Admin</h1>
+      <div class="form-group">
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+          class="input-field"
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="input-field"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary login-btn">
+        Login
+      </button>
+    </form>
+
+
+    <div class="dashboard hidden">
+      <div id="admin-calendar"></div>
+      <div class="dashboard-right">
+          <div class="dashboard-help">
+            <p>Drag to select and create a booking block</p>
+            <p>Click bookings to view details</p>
+            <p>Click blocked slots to unblock</p>
+          </div>
+          <label>Change Rate Per Hour</label>
+          <div class="rate-row">
+            <div class="rate-input-wrapper">
+              <span class="currency">$</span>
+              <input type="text" id="rate-input" name="rate" required />
+            </div>
+            <button id="update-rate" class="btn btn-outline-1">Confirm</button>
+          </div>
+      </div>    
+    </div>
+
+    <div id="booking-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+
+        <h2>Booking Details</h2>
+
+        <p><strong>Name:</strong> <span id="modal-name"></span></p>
+        <p><strong>Email:</strong> <span id="modal-email"></span></p>
+        <p><strong>Pickup:</strong> <span id="modal-pickup"></span></p>
+        <p><strong>Dropoff:</strong> <span id="modal-dropoff"></span></p>
+        <p><strong>Time:</strong> <span id="modal-time"></span></p>
+
+      </div>
+  </div>
+
+  </div>
+  <script src="./js/admin.js"></script>
+</body>
+</html>
