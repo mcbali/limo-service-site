@@ -129,7 +129,7 @@ Open admin page directly on http://localhost:5501/frontend/admin.html
 6. Payment completes → webhook confirms booking
 7. Booking becomes paid
 
-Key Design Decisions
+### Key Design Decisions
 - Hold → Pay → Confirm booking lifecycle
 - PostgreSQL tstzrange used for overlap detection
 - Background worker handles cleanup instead of real-time cancellation
