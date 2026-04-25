@@ -1,4 +1,4 @@
-# High-End Transportation, LLC
+# Limo Service Site
 
 A full-stack luxury transportation booking system built with Go (Chi framework) and a vanilla HTML/CSS/JavaScript frontend. The system supports real-time booking, Stripe payments, admin controls, and automated booking expiration.
 
